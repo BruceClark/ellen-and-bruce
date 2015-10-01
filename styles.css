@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url('../fonts/Gotham-Light.eot');
+  src: url('../fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Gotham-Light.woff2') format('woff2'), url('../fonts/Gotham-Light.woff') format('woff'), url('../fonts/Gotham-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Museo-Slab-500';
+  src: url('../fonts/Museo-Slab-500.eot');
+  src: url('../fonts/Museo-Slab-500.eot?#iefix') format('embedded-opentype'), url('../fonts/Museo-Slab-500.woff2') format('woff2'), url('../fonts/MuseoSlab-500.woff') format('woff'), url('../fonts/MuseoSlab-500.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('../fonts/Gotham-Medium.eot');
+  src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Gotham-Medium.woff2') format('woff2'), url('../fonts/GothamMedium.woff') format('woff'), url('../fonts/GothamMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
