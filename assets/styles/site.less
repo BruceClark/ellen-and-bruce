@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.font_heading {
+  font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
+  font-weight: normal;
+}
+
+.font_primary {
+  font-family: "museo_slab500", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
+  font-weight: normal;
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: #eee;
+}
+
+body {
+  background: url(/images/bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 100%;
+}
+
+#content {
+  padding-top: 90px;
+  text-align: center;
+}
+
+h3, h4 {
+  .font_heading;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #888;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 36px;
+  color: #444;
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+
+h6 {
+  .font_primary;
+  font-weight: normal;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.2;
+
+  span {
+    font-size: 16px;
+    padding: 0 5px;
+    color: #777;
+  }
+}
+
+@media only screen and (max-device-width: 667px) {
+  body {
+    background-size: contain;
+  }
+
+  #content {
+    padding-top: 20px;
+  }
+
+  h4 {
+    margin-top: 110px;
+    font-size: 34px;
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size: 72px;
+  }
+
+  h6 {
+    margin-top: 5px;
+    font-size: 18px;
+
+    span {
+      font-size: 22px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: #777;
+    background-size: contain;
+  }
+
+  #content {
+    padding-top: 80px;
+  }
+
+  h4 {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.2;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 32px;
+    color: #333;
+    line-height: 1.2;
+  }
+
+  h6 {
+    margin-top: 0;
+    font-size: 12px;
+    color: #aaa;
+    line-height: 1.2;
+
+    span {
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {
+  html {
+    height: auto;
+    min-height: 0;
+  }
+
+  body {
+    background-size: cover;
+    margin-top: 0;
+  }
+
+  h3, h4, h6 {
+    margin: 0;
+  }
+
+  h4 {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h6 {
+    font-size: 12px;
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  #content {
+    padding: 20px 0 380px 0;
+  }
+}
