@@ -47,27 +47,27 @@ h4 {
 h4 {
   font-size: 16px;
   text-transform: uppercase;
-  color: #333;
+  color: #222;
   padding-bottom: 5px;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 8px #fff;
 }
 h3 {
   font-size: 36px;
-  color: #555;
+  color: #666;
   padding-top: 2px;
   padding-bottom: 10px;
 }
 h6 {
   font-family: "museo_slab500", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
   font-weight: normal;
-  font-size: 12px;
-  color: #444;
+  font-size: 14px;
+  color: #888;
   line-height: 1.2;
 }
 h6 span {
   font-size: 16px;
   padding: 0 5px;
-  color: #777;
+  color: #444;
 }
 @media only screen and (max-device-width: 667px) {
   body {
@@ -92,7 +92,7 @@ h6 span {
     font-size: 22px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 720px) {
   body {
     background-color: #777;
     background-size: contain;
@@ -103,6 +103,7 @@ h6 span {
   h4 {
     font-size: 14px;
     color: #ccc;
+    text-shadow: none;
     line-height: 1.2;
   }
   h3 {
