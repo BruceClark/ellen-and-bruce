@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-  <title>An Urban Adventure | Ellen + Bruce</title>
+  <title>The Big Day | Ellen + Bruce</title>
 
   <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
@@ -36,22 +36,44 @@
                                ~----"~       \
                                               \-->
 </head>
-<body class="home">
+<body class="day">
 
   <nav class="navigation">
     <ul>
-      <li class="active"><a href="/">Home</a></li>
-      <li><a href="/day.html">The Big Day</a></li>
+      <li><a href="/">Home</a></li>
+      <li class="active"><a href="/day.html">The Big Day</a></li>
       <li><a href="https://www.zola.com/registry/ellenandbruce">Registry</a></li>
     </ul>
   </nav>
 
   <section id="content">
-    <h1><a href="/day.html">April 30, 2016</a></h1>
-    <h6>Denver, Colorado</h6>
-    <h3>+</h3>
-    <h3 class="alt">Ellen + Bruce</h3>
+    <h2>Dear Family &amp; Friends</h2>
+    <div class="text">
+    <p>
+      We invite you to save the date of April 30, 2016 for an evening of wedding revelry at <a onclick="swap_blanc();" href="#blanc">Blanc</a>, located in the RiNo district of Denver, Colorado.
+    </p>
+    <p>
+      Plase check back soon for additional details, including smashing hotel rates and awesome places to visit in beautiful Downtown.
+    </p>
+    <p>
+
+    </p>
+    </div>
   </section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+  var blanc_status = false;
+
+  function swap_blanc(event) {
+    if (!blanc_status) {
+      blanc_status = true;
+      $('body').addClass('blanc');
+    } else {
+      blanc_status = false;
+      $('body').removeClass('blanc');
+    }
+  }
+</script>
 </body>
 </html>
