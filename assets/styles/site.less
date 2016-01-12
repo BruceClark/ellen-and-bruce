@@ -10,6 +10,7 @@
 @blue: #4178ac;
 @aqua: #477e8d;
 
+
 //Web Fonts
 
 .font_heading {
@@ -33,13 +34,11 @@ html {
 }
 
 body {
-  background: #ddd url(/images/bg.jpg) no-repeat 50% 50%;
-  background-size: cover;
   height: 100%;
   .font_primary;
   color: #444;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 28px;
   min-width: 840px;
 
   &.day {
@@ -55,9 +54,61 @@ body {
   }
 }
 
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.content-block {
+  padding: 30px 0 30px 250px;
+
+  &.callout {
+    padding: 30px 125px;
+
+    h1 {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+
+  &.flip {
+    padding-right: 250px;
+    padding-left: 0;
+  }
+
+  .dedent {
+    float: left;
+    margin-left: -250px;
+    width: 220px;
+  }
+
+  &.flip .dedent {
+    float: right;
+    margin-right: -250px;
+    margin-left: 0;
+  }
+
+  h3, h4 {
+    padding: 10px 0 5px 0;
+  }
+}
+
 .navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   font-size: 16px;
   background: rgba(255,255,255,.85);
+}
+
+#content {
+  padding: 50px 0 35px 0;
 }
 
 
@@ -69,31 +120,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 42px;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 34px;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 28px;
+
+  em {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    padding: 8px 0 0 0;
+    color: @aqua;
+  }
 }
 
 h4 {
-  font-size: 28px;
+  font-size: 22px;
 }
 
 h5 {
-  font-size: 24px;
-}
-
-h6 {
   font-size: 20px;
 }
 
+h6 {
+  font-size: 18px;
+}
+
 p {
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+
+//Utilities
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 
 
@@ -119,6 +191,14 @@ a {
     li {
       display: inline-block;
 
+      &.home {
+        .font_heading;
+        margin-right: 15px;
+        padding-top: 16px;
+        font-size: 26px;
+        color: #333;
+      }
+
       &.active {
 
         a {
@@ -130,7 +210,7 @@ a {
       a {
         display: block;
         color: #555;
-        padding: 18px 25px;
+        padding: 22px 25px 14px 25px;
 
         &:hover {
           color: @blue;
@@ -146,140 +226,20 @@ a {
 
 // // Home
 
+.home #intro {
+  background: #0a1f31 url(/images/bg-dark.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 500px;
+}
+
+.home #story {
+  background: #fff url(/images/layout/texture/light.png);
+  background-size: 150px 150px;
+  padding: 20px 0 30px 0;
+  border-bottom: 5px solid #ddd;
+}
+
 .home #content {
-  padding-top: 40px;
-  text-align: center;
-
-  h1 {
-    display: block;
-    font-size: 46px;
-
-    a {
-      color: #444;
-
-      &:hover {
-        color: @blue;
-        transition: color .5s ease-in;
-      }
-    }
-  }
-
-  h6 {
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 9px;
-    padding-left: 9px;
-    display: inline-block;
-    color: #444;
-  }
-
-  h3 {
-    font-size: 100px;
-
-    &.alt {
-      display: none;
-    }
-  }
+  background: #f4f4f4;
 }
 
-
-// // Big Day
-
-.day #content {
-  text-align: center;
-  padding-top: 50px;
-
-  h2 {
-    text-align: center;
-    margin-bottom: -12px;
-
-    &.alt {
-      color: #fff;
-    }
-  }
-
-  .text {
-    text-align: left;
-    width: 580px;
-    margin: 0 auto;
-    padding: 25px 30px 0 30px;
-    background: rgba(255,255,255,.70);
-  }
-}
-
-@media only screen
-    and (max-device-width : 667px)
-    and (-webkit-min-device-pixel-ratio : 2)
-{
-  body {
-    font-size: 14px;
-    line-height: 22px;
-    min-width: 0;
-
-    &.home {
-      background: #222 url(/images/bg-dark.jpg) no-repeat 50% 50%;
-      background-size: cover;
-    }
-  }
-
-  .navigation {
-    ul li {
-      font-size: 14px;
-
-      &.active a {
-        border-width: 3px;
-      }
-
-      a {
-        padding: 10px 20px;
-      }
-    }
-  }
-
-  .home #content {
-    padding-top: 35px;
-
-    h1 {
-      font-size: 28px;
-      color: #fff;
-
-      a {
-        color: #fff;
-      }
-    }
-
-    h6 {
-      font-size: 14px;
-      padding: 0;
-      letter-spacing: 1px;
-      padding-top: 8px;
-      color: #fff;
-    }
-
-    h3 {
-      display: none;
-
-      &.alt {
-        display: block;
-        padding-top: 10px;
-        font-size: 16px;
-        color: #fff;
-      }
-    }
-  }
-
-  .day #content {
-    padding-top: 25px;
-
-    h2 {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-
-    .text {
-      width: 100%;
-      box-sizing: border-box;
-    }
-  }
-}

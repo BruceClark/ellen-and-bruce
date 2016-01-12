@@ -30,14 +30,12 @@ html {
   background: #eee;
 }
 body {
-  background: #dddddd url(/images/bg.jpg) no-repeat 50% 50%;
-  background-size: cover;
   height: 100%;
   font-family: "museo_slab500", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
   font-weight: normal;
   color: #444;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 28px;
   min-width: 840px;
 }
 body.day {
@@ -49,9 +47,52 @@ body.day.blanc {
 body.day.blanc #content h2 {
   color: #fff;
 }
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+.content-block {
+  padding: 30px 0 30px 250px;
+}
+.content-block.callout {
+  padding: 30px 125px;
+}
+.content-block.callout h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.content-block.callout h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.content-block.flip {
+  padding-right: 250px;
+  padding-left: 0;
+}
+.content-block .dedent {
+  float: left;
+  margin-left: -250px;
+  width: 220px;
+}
+.content-block.flip .dedent {
+  float: right;
+  margin-right: -250px;
+  margin-left: 0;
+}
+.content-block h3,
+.content-block h4 {
+  padding: 10px 0 5px 0;
+}
 .navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   font-size: 16px;
   background: rgba(255, 255, 255, 0.85);
+}
+#content {
+  padding: 50px 0 35px 0;
 }
 h1,
 h2,
@@ -64,25 +105,41 @@ h6 {
   line-height: 1.2;
 }
 h1 {
-  font-size: 52px;
+  font-size: 42px;
 }
 h2 {
-  font-size: 40px;
+  font-size: 34px;
 }
 h3 {
-  font-size: 32px;
-}
-h4 {
   font-size: 28px;
 }
-h5 {
-  font-size: 24px;
+h3 em {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  padding: 8px 0 0 0;
+  color: #477e8d;
 }
-h6 {
+h4 {
+  font-size: 22px;
+}
+h5 {
   font-size: 20px;
 }
+h6 {
+  font-size: 18px;
+}
 p {
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 a {
   color: #4178ac;
@@ -98,6 +155,14 @@ a:hover {
 .navigation ul li {
   display: inline-block;
 }
+.navigation ul li.home {
+  font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
+  font-weight: normal;
+  margin-right: 15px;
+  padding-top: 16px;
+  font-size: 26px;
+  color: #333;
+}
 .navigation ul li.active a {
   color: #4178ac;
   border-bottom: 4px solid #4178ac;
@@ -105,114 +170,23 @@ a:hover {
 .navigation ul li a {
   display: block;
   color: #555;
-  padding: 18px 25px;
+  padding: 22px 25px 14px 25px;
 }
 .navigation ul li a:hover {
   color: #4178ac;
   border-bottom: 4px solid #ddd;
 }
+.home #intro {
+  background: #0a1f31 url(/images/bg-dark.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 500px;
+}
+.home #story {
+  background: #ffffff url(/images/layout/texture/light.png);
+  background-size: 150px 150px;
+  padding: 20px 0 30px 0;
+  border-bottom: 5px solid #ddd;
+}
 .home #content {
-  padding-top: 40px;
-  text-align: center;
-}
-.home #content h1 {
-  display: block;
-  font-size: 46px;
-}
-.home #content h1 a {
-  color: #444;
-}
-.home #content h1 a:hover {
-  color: #4178ac;
-  transition: color 0.5s ease-in;
-}
-.home #content h6 {
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 9px;
-  padding-left: 9px;
-  display: inline-block;
-  color: #444;
-}
-.home #content h3 {
-  font-size: 100px;
-}
-.home #content h3.alt {
-  display: none;
-}
-.day #content {
-  text-align: center;
-  padding-top: 50px;
-}
-.day #content h2 {
-  text-align: center;
-  margin-bottom: -12px;
-}
-.day #content h2.alt {
-  color: #fff;
-}
-.day #content .text {
-  text-align: left;
-  width: 580px;
-  margin: 0 auto;
-  padding: 25px 30px 0 30px;
-  background: rgba(255, 255, 255, 0.7);
-}
-@media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-  body {
-    font-size: 14px;
-    line-height: 22px;
-    min-width: 0;
-  }
-  body.home {
-    background: #222222 url(/images/bg-dark.jpg) no-repeat 50% 50%;
-    background-size: cover;
-  }
-  .navigation ul li {
-    font-size: 14px;
-  }
-  .navigation ul li.active a {
-    border-width: 3px;
-  }
-  .navigation ul li a {
-    padding: 10px 20px;
-  }
-  .home #content {
-    padding-top: 35px;
-  }
-  .home #content h1 {
-    font-size: 28px;
-    color: #fff;
-  }
-  .home #content h1 a {
-    color: #fff;
-  }
-  .home #content h6 {
-    font-size: 14px;
-    padding: 0;
-    letter-spacing: 1px;
-    padding-top: 8px;
-    color: #fff;
-  }
-  .home #content h3 {
-    display: none;
-  }
-  .home #content h3.alt {
-    display: block;
-    padding-top: 10px;
-    font-size: 16px;
-    color: #fff;
-  }
-  .day #content {
-    padding-top: 25px;
-  }
-  .day #content h2 {
-    font-size: 24px;
-    margin-bottom: 12px;
-  }
-  .day #content .text {
-    width: 100%;
-    box-sizing: border-box;
-  }
+  background: #f4f4f4;
 }
