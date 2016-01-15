@@ -38,20 +38,8 @@ body {
   .font_primary;
   color: #444;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.6;
   min-width: 840px;
-
-  &.day {
-    background-image: url(/images/bg-day.jpg);
-
-    &.blanc {
-      background-image: url(/images/bg-blanc.jpg);
-
-      #content h2 {
-        color: #fff;
-      }
-    }
-  }
 }
 
 .container {
@@ -96,6 +84,38 @@ body {
   h3, h4 {
     padding: 10px 0 5px 0;
   }
+}
+
+.column {
+  width: 450px;
+  padding: 0 15px;
+  float: left;
+
+  &.short {
+    width: 410px;
+  }
+
+  h3 {
+    padding-bottom: 35px;
+  }
+
+  .indented {
+    padding-left: 170px;
+
+    h5 {
+      float: left;
+      margin-left: -170px;
+      width: 150px;
+    }
+  }
+}
+
+.note {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  padding-right: 15px;
+  color: #777;
 }
 
 .navigation {
@@ -226,20 +246,106 @@ a {
 
 // // Home
 
-.home #intro {
-  background: #0a1f31 url(/images/bg-dark.jpg) no-repeat 50% 50%;
+body.home #intro {
+  background: #808d92 url(/images/bg-ice-cream.jpg) no-repeat 50% 0;
   background-size: cover;
   height: 500px;
 }
 
-.home #story {
+body.home #story {
   background: #fff url(/images/layout/texture/light.png);
   background-size: 150px 150px;
   padding: 20px 0 30px 0;
   border-bottom: 5px solid #ddd;
+
+  h1 {
+    color: #617cad;
+  }
 }
 
-.home #content {
+body.home #content {
   background: #f4f4f4;
+}
+
+// // The Big Day
+
+body.day #intro {
+  background: #0a1f31 url(/images/bg-dark.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 500px;
+
+  &.blanc {
+    background: #959ca8 url(/images/bg-blanc.jpg) no-repeat 50% 50%;
+    background-size: cover;
+  }
+}
+
+body.day #content {
+  padding: 0;
+  background: #f4f4f4;
+
+  h1 {
+    text-align: center;
+    color: #2f4a5f;
+    padding-bottom: 35px;
+  }
+
+  .ceramony {
+    padding: 50px 0 35px 0;
+    background: #fff url(/images/layout/texture/light.png);
+    background-size: 150px 150px;
+  }
+
+  .guest-information {
+    padding: 50px 0;
+    border-top: 5px solid #ddd;
+    border-bottom: 5px solid #ddd;
+    text-align: center;
+
+    h2 {
+      padding: 0 0 20px 0;
+    }
+
+    h5 {
+      padding: 5px 0 12px 0;
+    }
+  }
+
+  .party {
+    clear: both;
+    padding: 50px 0;
+    background: #fff;
+
+    .column {
+      text-align: center;
+
+      img {
+        margin-bottom: 15px;
+      }
+
+      h4 {
+        padding: 0 0 12px 0;
+      }
+
+      ul {
+        padding-bottom: 35px;
+      }
+
+      ul li {
+        list-style: none;
+
+        &.highlight {
+          padding-bottom: 12px;
+        }
+
+        strong {
+          display: block;
+          .font_heading;
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }
 

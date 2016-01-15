@@ -35,17 +35,8 @@ body {
   font-weight: normal;
   color: #444;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 1.6;
   min-width: 840px;
-}
-body.day {
-  background-image: url(/images/bg-day.jpg);
-}
-body.day.blanc {
-  background-image: url(/images/bg-blanc.jpg);
-}
-body.day.blanc #content h2 {
-  color: #fff;
 }
 .container {
   width: 960px;
@@ -82,6 +73,32 @@ body.day.blanc #content h2 {
 .content-block h3,
 .content-block h4 {
   padding: 10px 0 5px 0;
+}
+.column {
+  width: 450px;
+  padding: 0 15px;
+  float: left;
+}
+.column.short {
+  width: 410px;
+}
+.column h3 {
+  padding-bottom: 35px;
+}
+.column .indented {
+  padding-left: 170px;
+}
+.column .indented h5 {
+  float: left;
+  margin-left: -170px;
+  width: 150px;
+}
+.note {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  padding-right: 15px;
+  color: #777;
 }
 .navigation {
   position: absolute;
@@ -176,17 +193,85 @@ a:hover {
   color: #4178ac;
   border-bottom: 4px solid #ddd;
 }
-.home #intro {
-  background: #0a1f31 url(/images/bg-dark.jpg) no-repeat 50% 50%;
+body.home #intro {
+  background: #808d92 url(/images/bg-ice-cream.jpg) no-repeat 50% 0;
   background-size: cover;
   height: 500px;
 }
-.home #story {
+body.home #story {
   background: #ffffff url(/images/layout/texture/light.png);
   background-size: 150px 150px;
   padding: 20px 0 30px 0;
   border-bottom: 5px solid #ddd;
 }
-.home #content {
+body.home #story h1 {
+  color: #617cad;
+}
+body.home #content {
   background: #f4f4f4;
+}
+body.day #intro {
+  background: #0a1f31 url(/images/bg-dark.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 500px;
+}
+body.day #intro.blanc {
+  background: #959ca8 url(/images/bg-blanc.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+body.day #content {
+  padding: 0;
+  background: #f4f4f4;
+}
+body.day #content h1 {
+  text-align: center;
+  color: #2f4a5f;
+  padding-bottom: 35px;
+}
+body.day #content .ceramony {
+  padding: 50px 0 35px 0;
+  background: #ffffff url(/images/layout/texture/light.png);
+  background-size: 150px 150px;
+}
+body.day #content .guest-information {
+  padding: 50px 0;
+  border-top: 5px solid #ddd;
+  border-bottom: 5px solid #ddd;
+  text-align: center;
+}
+body.day #content .guest-information h2 {
+  padding: 0 0 20px 0;
+}
+body.day #content .guest-information h5 {
+  padding: 5px 0 12px 0;
+}
+body.day #content .party {
+  clear: both;
+  padding: 50px 0;
+  background: #fff;
+}
+body.day #content .party .column {
+  text-align: center;
+}
+body.day #content .party .column img {
+  margin-bottom: 15px;
+}
+body.day #content .party .column h4 {
+  padding: 0 0 12px 0;
+}
+body.day #content .party .column ul {
+  padding-bottom: 35px;
+}
+body.day #content .party .column ul li {
+  list-style: none;
+}
+body.day #content .party .column ul li.highlight {
+  padding-bottom: 12px;
+}
+body.day #content .party .column ul li strong {
+  display: block;
+  font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase;
 }

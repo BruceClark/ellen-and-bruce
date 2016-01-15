@@ -50,40 +50,126 @@
 
   <nav class="navigation">
     <ul>
-      <li><a href="/">Home</a></li>
+      <li class="home">E + B</li>
+      <li><a href="/">The Couple</a></li>
       <li class="active"><a href="/day.html">The Big Day</a></li>
+      <li><a href="/denver.html">Staying in Denver</a></li>
       <li><a href="https://www.zola.com/registry/ellenandbruce">Registry</a></li>
     </ul>
   </nav>
 
-  <section id="content">
-    <h2>Dear Family &amp; Friends</h2>
-    <div class="text">
-    <p>
-      We invite you to save the date of April 30, 2016 for an evening of wedding revelry at <a onclick="swap_blanc();" href="#blanc">Blanc</a>, located in the RiNo district of Denver, Colorado.
-    </p>
-    <p>
-      Plase check back soon for additional details, including smashing hotel rates and awesome places to visit in beautiful Downtown Denver.
-    </p>
-    <p>
-
-    </p>
-    </div>
+  <section id="intro">
+    <span id="countdown"></span>
   </section>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-  var blanc_status = false;
+  <section id="content"><div class="ceramony clearfix">
+    <div class="container">
 
+      <div class="column short">
+        <h3>Ceremony &amp; Reception</h3>
+
+        <div class="indented">
+          <h5>Date &amp; Time</h5>
+          <p>
+            April 30, 2016<br>
+            5:30pm &ndash; 11pm
+            <br>(Sunset is at 7:50pm)
+          </p>
+
+          <h5>Location</h5>
+          <p><a onclick="swap_blanc();" href="#blanc">Blanc</a><br>3150 Walnut Street<br>Denver, Colorado 80205<br><a href="https://www.google.com/maps/place/3150+Walnut+St,+Denver,+CO+80205/@39.7642399,-104.9816027,17z/data=!3m1!4b1!4m2!3m1!1s0x876c791955d69c89:0x8da55eb09745add9" target="_blank">(Google Maps Link)</a></p>
+        </div>
+      </div><!-- / .column -->
+
+      <div class="column">
+        <h3>&nbsp;</h3>
+
+        <div class="indented">
+          <h5>What to Wear</h5>
+          <p>
+            Cocktail Attire
+            <span class="note">The wedding will be both indoors and outdoors. Colorado can be chilly in April so we recommend layering.</span>
+          </p>
+        </div>
+
+        <div class="indented">
+          <h5>Transportation</h5>
+          <p>
+            Uber, Lyft, or Cab
+            <span class="note">The venue is about a 5-to-10 minute ride from Downtown. Street parking is available for those who drive.</span>
+          </p>
+        </div>
+      </div><!-- / .column -->
+
+    </div><!-- / .container -->
+  </div><!-- / .ceramony -->
+
+  <div class="guest-information"><div class="container">
+
+    <h2>Guest Information</h2>
+
+    <h5>Adults Only Please</h5>
+    <p>Please make sure to leave the kiddos at home for this event.<br>We love all friends and family but request that this be an adult only affair.</p>
+
+    <h5>Unplugged Ceramony</h5>
+    <p>We kindly ask during the ceramony that all guests turn off their phones and refrain from taking photos.<br>We encourage guests to enjoy the moment and let our photographers capture it in their vision.</p>
+
+    <h5>#EllenAndBruce</h5>
+    <p>Once the reception starts please feel free to use your devices and take as many photos as you'd like!</p>
+
+  </div></div><!-- / .guest-information -->
+
+  <div class="party clearfix"><div class="container">
+      <div class="column short">
+        <img src="/images/icons/flower.png" alt="flower" width="120" height="120">
+        <h4>Bride's Parents</h4>
+        <ul>
+          <li>John Caviglia</li>
+          <li>Barbara Caviglia</li>
+        </ul>
+
+        <h4>Bridal Party</h4>
+        <ul>
+          <li class="highlight"><strong>Maid of Honor</strong> Emily Caviglia</li>
+          <li>Alana Blythe</li>
+          <li>Jackie Zoeller</li>
+          <li>Miranda Clark</li>
+        </ul>
+      </div>
+
+      <div class="column short">
+        <img src="/images/icons/tie.png" alt="Tie" width="120" height="120">
+        <h4>Groom's Parents</h4>
+        <ul>
+          <li>Steve Clark</li>
+          <li>Betsy Clark</li>
+        </ul>
+
+        <h4>Groomsmen</h4>
+        <ul>
+          <li class="highlight"><strong>Best Man</strong> Noah Feruzi</li>
+          <li>Andrew Martin</li>
+          <li>Casey O'Hara</li>
+          <li>Taylor Smith</li>
+        </ul>
+      </div>
+    </div></div><!-- / .party -->
+
+  </div></section><!-- / #content -->
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+  var blanc_status = false;
   function swap_blanc(event) {
     if (!blanc_status) {
       blanc_status = true;
-      $('body').addClass('blanc');
+      $('#intro').addClass('blanc');
     } else {
       blanc_status = false;
-      $('body').removeClass('blanc');
+      $('#intro').removeClass('blanc');
     }
   }
-</script>
+  </script>
 </body>
 </html>
