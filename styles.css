@@ -204,9 +204,6 @@ body.home #story {
   padding: 20px 0 30px 0;
   border-bottom: 5px solid #ddd;
 }
-body.home #story h1 {
-  color: #617cad;
-}
 body.home #content {
   background: #f4f4f4;
 }
@@ -289,7 +286,7 @@ body.denver #content .stay {
   background-size: 150px 150px;
 }
 body.denver #content .hotel {
-  padding: 20px 0;
+  padding: 25px 0 5px 0;
   background: #fff;
 }
 body.denver #content .hotel.curtis {
@@ -323,9 +320,53 @@ body.denver #content .hotel .request {
   float: right;
   font-style: italic;
   color: #777;
-  padding: 10px 15px 0 0;
+  padding: 0 15px 0 0;
 }
 body.denver #content .hotel p .room {
   display: inline-block;
   width: 210px;
+}
+body.denver #content .city {
+  padding: 30px 0 40px 0;
+  background: #44567f url(/images/bg-denver.jpg) no-repeat 50% 0%;
+  background-size: cover;
+}
+body.denver #content .city h2 {
+  font-size: 38px;
+  color: #fff;
+  padding: 0 0 30px 0;
+}
+body.denver #content .city .highlight {
+  margin: 0;
+  padding: 30px 42px 4px 42px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ddd;
+}
+body.denver #content .city .highlight ul {
+  padding: 0 0 20px 15px;
+  width: 30%;
+  float: left;
+}
+body.denver #content .city .highlight ul li.title {
+  margin-left: -15px;
+  list-style: none;
+  font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
+  font-weight: normal;
+  font-size: 18px;
+}
+body.denver #content .city .highlight ul li {
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+body.denver #content .city .highlight ul li span {
+  display: block;
+  font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+body.denver #content .city .highlight ul li span em {
+  font-size: 13px;
+  text-transform: none;
+  display: block;
 }

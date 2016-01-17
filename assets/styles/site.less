@@ -257,10 +257,6 @@ body.home #story {
   background-size: 150px 150px;
   padding: 20px 0 30px 0;
   border-bottom: 5px solid #ddd;
-
-  h1 {
-    color: #617cad;
-  }
 }
 
 body.home #content {
@@ -367,7 +363,7 @@ body.denver #content {
   }
 
   .hotel {
-    padding: 20px 0;
+    padding: 25px 0 5px 0;
     background: #fff;
 
     &.curtis {
@@ -408,12 +404,62 @@ body.denver #content {
       float: right;
       font-style: italic;
       color: #777;
-      padding: 10px 15px 0 0;
+      padding: 0 15px 0 0;
     }
 
     p .room {
       display: inline-block;
       width: 210px;
+    }
+  }
+
+  .city {
+    padding: 30px 0 40px 0;
+    background: #44567f url(/images/bg-denver.jpg) no-repeat 50% 0%;
+    background-size: cover;
+
+    h2 {
+      font-size: 38px;
+      color: #fff;
+      padding: 0 0 30px 0;
+    }
+
+    .highlight {
+      margin: 0;
+      padding: 30px 42px 4px 42px;
+      background: rgba(0,0,0,.7);
+      color: #ddd;
+
+      ul {
+        padding: 0 0 20px 15px;
+        width: 30%;
+        float: left;
+
+        li.title {
+          margin-left: -15px;
+          list-style: none;
+          .font_heading;
+          font-size: 18px;
+        }
+
+        li {
+          font-size: 15px;
+          padding-bottom: 15px;
+
+          span {
+            display: block;
+            .font_heading;
+            text-transform: uppercase;
+            font-size: 12px;
+
+            em {
+              font-size: 13px;
+              text-transform: none;
+              display: block;
+            }
+          }
+        }
+      }
     }
   }
 }
