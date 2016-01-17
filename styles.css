@@ -191,7 +191,7 @@ a:hover {
 }
 .navigation ul li a:hover {
   color: #4178ac;
-  border-bottom: 4px solid #ddd;
+  border-bottom: 4px solid #aaa;
 }
 body.home #intro {
   background: #808d92 url(/images/bg-ice-cream.jpg) no-repeat 50% 0;
@@ -211,7 +211,7 @@ body.home #content {
   background: #f4f4f4;
 }
 body.day #intro {
-  background: #0a1f31 url(/images/bg-dark.jpg) no-repeat 50% 50%;
+  background: #0a1f31 url(/images/bg.jpg) no-repeat 50% 20%;
   background-size: cover;
   height: 500px;
 }
@@ -274,4 +274,58 @@ body.day #content .party .column ul li strong {
   font-weight: normal;
   font-size: 12px;
   text-transform: uppercase;
+}
+body.denver #intro {
+  background: #0a1f31 url(/images/bg-dark.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 500px;
+}
+body.denver #content {
+  padding: 0;
+}
+body.denver #content .stay {
+  padding: 20px 0 0 0;
+  background: #ffffff url(/images/layout/texture/light.png);
+  background-size: 150px 150px;
+}
+body.denver #content .hotel {
+  padding: 20px 0;
+  background: #fff;
+}
+body.denver #content .hotel.curtis {
+  background: #f4f4f4;
+}
+body.denver #content .hotel .dedent span {
+  display: block;
+  font-size: 14px;
+  font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #888;
+}
+body.denver #content .hotel .dedent a {
+  display: block;
+  padding-top: 5px;
+  font-size: 14px;
+}
+body.denver #content .hotel .pics {
+  text-align: center;
+  padding: 15px 0 30px 0;
+}
+body.denver #content .hotel .pics a img {
+  cursor: zoom-in;
+}
+body.denver #content .hotel .pics a.showing img {
+  cursor: zoom-out;
+}
+body.denver #content .hotel .request {
+  float: right;
+  font-style: italic;
+  color: #777;
+  padding: 10px 15px 0 0;
+}
+body.denver #content .hotel p .room {
+  display: inline-block;
+  width: 210px;
 }
