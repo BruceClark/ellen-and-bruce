@@ -253,7 +253,7 @@ body.home #intro {
 }
 
 body.home #story {
-  background: #fff url(/images/layout/texture/light.png);
+  background: #fff url(/images/texture/light.png);
   background-size: 150px 150px;
   padding: 20px 0 30px 0;
   border-bottom: 5px solid #ddd;
@@ -261,6 +261,65 @@ body.home #story {
 
 body.home #content {
   background: #f4f4f4;
+
+  .content-block {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+body.home #gallery {
+  padding: 50px 0;
+  background: #ddd url(/images/texture/footprint.png);
+  border-top: 5px solid #ddd;
+
+  h2 {
+    text-align: center;
+    padding: 0 0 30px 0;
+    color: #777;
+  }
+
+  .gallery-holder {
+    text-align: center;
+
+    a:hover {
+      img {
+        background: #ccc;
+      }
+    }
+
+    img {
+      cursor: zoom-in;
+      margin: 18px;
+      box-shadow: 5px 5px 30px rgba(0,0,0,.12);
+      height: 250px;
+    }
+  }
+
+  .lightbox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img.gallery-image {
+      cursor: zoom-out;
+      display: block;
+      margin: 0 auto;
+      max-width: 920px;
+      max-height: 640px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+  }
 }
 
 // // The Big Day
@@ -288,7 +347,7 @@ body.day #content {
 
   .ceramony {
     padding: 50px 0 35px 0;
-    background: #fff url(/images/layout/texture/light.png);
+    background: #fff url(/images/texture/light.png);
     background-size: 150px 150px;
   }
 
@@ -358,8 +417,9 @@ body.denver #content {
 
   .stay {
     padding: 20px 0 0 0;
-    background: #fff url(/images/layout/texture/light.png);
+    background: #fff url(/images/texture/light.png);
     background-size: 150px 150px;
+    border-bottom: 5px solid #ddd;
   }
 
   .hotel {
@@ -445,6 +505,15 @@ body.denver #content {
         li {
           font-size: 15px;
           padding-bottom: 15px;
+
+          a {
+            display: block;
+            color: #ddd;
+
+            &:hover {
+              color: #7a8c8a;
+            }
+          }
 
           span {
             display: block;
