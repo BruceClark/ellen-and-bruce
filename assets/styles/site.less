@@ -15,12 +15,12 @@
 
 .font_heading {
   font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
 .font_primary {
   font-family: "museo_slab500", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
 
@@ -48,7 +48,7 @@ body {
 }
 
 .content-block {
-  padding: 30px 0 30px 250px;
+  padding: 30px 30px 30px 250px;
 
   &.callout {
     padding: 30px 125px;
@@ -66,18 +66,18 @@ body {
 
   &.flip {
     padding-right: 250px;
-    padding-left: 0;
+    padding-left: 30px;
   }
 
   .dedent {
     float: left;
-    margin-left: -250px;
-    width: 220px;
+    margin-left: -220px;
+    width: 200px;
   }
 
   &.flip .dedent {
     float: right;
-    margin-right: -250px;
+    margin-right: -220px;
     margin-left: 0;
   }
 
@@ -153,7 +153,6 @@ h3 {
   em {
     display: block;
     font-size: 18px;
-    font-weight: bold;
     font-style: normal;
     padding: 8px 0 0 0;
     color: @aqua;
@@ -217,6 +216,7 @@ a {
         padding-top: 16px;
         font-size: 26px;
         color: #333;
+        cursor: pointer;
       }
 
       &.active {
@@ -241,6 +241,25 @@ a {
   }
 }
 
+.designed {
+  backgorund: #eee;
+  font-size: 12px;
+  .font_heading;
+  padding: 15px 32px;
+  text-transform: uppercase;
+  text-align: center;
+
+  strong {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  em {
+    font-size: 16px;
+    color: #bd3622;
+    padding: 0 2px;
+  }
+}
 
 //Pages
 
@@ -255,8 +274,14 @@ body.home #intro {
 body.home #story {
   background: #fff url(/images/texture/light.png);
   background-size: 150px 150px;
-  padding: 20px 0 30px 0;
-  border-bottom: 5px solid #ddd;
+  padding: 20px 0 0 0;
+
+  .clarity {
+    padding: 0 25px 25px 25px;
+    font-style: italic;
+    color: #888;
+    text-align: center;
+  }
 }
 
 body.home #content {
@@ -268,6 +293,7 @@ body.home #content {
 
     &:last-child {
       border-bottom: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -325,7 +351,7 @@ body.home #gallery {
 // // The Big Day
 
 body.day #intro {
-  background: #0a1f31 url(/images/bg.jpg) no-repeat 50% 20%;
+  background: #b3b3b3 url(/images/bg.jpg) no-repeat 50% 20%;
   background-size: cover;
   height: 500px;
 
@@ -333,6 +359,11 @@ body.day #intro {
     background: #959ca8 url(/images/bg-blanc.jpg) no-repeat 50% 50%;
     background-size: cover;
   }
+}
+
+body.day #map {
+  border-top: 5px solid #ddd;
+  height: 320px;
 }
 
 body.day #content {
@@ -345,7 +376,7 @@ body.day #content {
     padding-bottom: 35px;
   }
 
-  .ceramony {
+  .ceremony {
     padding: 50px 0 35px 0;
     background: #fff url(/images/texture/light.png);
     background-size: 150px 150px;
@@ -355,14 +386,25 @@ body.day #content {
     padding: 50px 0;
     border-top: 5px solid #ddd;
     border-bottom: 5px solid #ddd;
-    text-align: center;
+
+    .clarity {
+      padding: 0 25px 35px 25px;
+      font-style: italic;
+      color: #888;
+      text-align: center;
+    }
 
     h2 {
-      padding: 0 0 20px 0;
+      padding: 0 0 10px 0;
+      text-align: center;
     }
 
     h5 {
-      padding: 5px 0 12px 0;
+      padding: 15px 0 12px 0;
+    }
+
+    .block {
+      padding: 0 200px;
     }
   }
 
@@ -371,8 +413,26 @@ body.day #content {
     padding: 50px 0;
     background: #fff;
 
+    h2 {
+      text-align: center;
+    }
+
     .column {
       text-align: center;
+      padding: 0 0 0 80px;
+      width: 400px;
+
+      &.alt {
+        width: 400px;
+        padding: 0 80px 0 0;
+      }
+
+      &.centered {
+        float: none;
+        clear: both;
+        margin: 0 auto;
+        padding: 30px 0 0 0;
+      }
 
       img {
         margin-bottom: 15px;
@@ -398,6 +458,11 @@ body.day #content {
           .font_heading;
           font-size: 12px;
           text-transform: uppercase;
+
+          span {
+            font-size: 10px;
+            text-transform: lowercase;
+          }
         }
       }
     }
@@ -419,7 +484,6 @@ body.denver #content {
     padding: 20px 0 0 0;
     background: #fff url(/images/texture/light.png);
     background-size: 150px 150px;
-    border-bottom: 5px solid #ddd;
   }
 
   .hotel {
@@ -436,7 +500,6 @@ body.denver #content {
         font-size: 14px;
         .font_heading;
         text-transform: uppercase;
-        font-weight: bold;
         color: #888;
       }
 
@@ -470,6 +533,10 @@ body.denver #content {
     p .room {
       display: inline-block;
       width: 210px;
+    }
+
+    p strong {
+      font-weight: normal;
     }
   }
 

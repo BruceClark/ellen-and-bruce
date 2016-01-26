@@ -18,11 +18,11 @@
 }
 .font_heading {
   font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
 }
 .font_primary {
   font-family: "museo_slab500", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
 }
 html {
   height: 100%;
@@ -32,7 +32,7 @@ html {
 body {
   height: 100%;
   font-family: "museo_slab500", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
   color: #444;
   font-size: 16px;
   line-height: 1.6;
@@ -43,7 +43,7 @@ body {
   margin: 0 auto;
 }
 .content-block {
-  padding: 30px 0 30px 250px;
+  padding: 30px 30px 30px 250px;
 }
 .content-block.callout {
   padding: 30px 125px;
@@ -58,16 +58,16 @@ body {
 }
 .content-block.flip {
   padding-right: 250px;
-  padding-left: 0;
+  padding-left: 30px;
 }
 .content-block .dedent {
   float: left;
-  margin-left: -250px;
-  width: 220px;
+  margin-left: -220px;
+  width: 200px;
 }
 .content-block.flip .dedent {
   float: right;
-  margin-right: -250px;
+  margin-right: -220px;
   margin-left: 0;
 }
 .content-block h3,
@@ -118,7 +118,7 @@ h4,
 h5,
 h6 {
   font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
   line-height: 1.2;
 }
 h1 {
@@ -133,7 +133,6 @@ h3 {
 h3 em {
   display: block;
   font-size: 18px;
-  font-weight: bold;
   font-style: normal;
   padding: 8px 0 0 0;
   color: #477e8d;
@@ -174,11 +173,12 @@ a:hover {
 }
 .navigation ul li.home {
   font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
   margin-right: 15px;
   padding-top: 16px;
   font-size: 26px;
   color: #333;
+  cursor: pointer;
 }
 .navigation ul li.active a {
   color: #4178ac;
@@ -193,6 +193,24 @@ a:hover {
   color: #4178ac;
   border-bottom: 4px solid #aaa;
 }
+.designed {
+  backgorund: #eee;
+  font-size: 12px;
+  font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
+  font-weight: normal !important;
+  padding: 15px 32px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.designed strong {
+  display: inline-block;
+  padding: 0 5px;
+}
+.designed em {
+  font-size: 16px;
+  color: #bd3622;
+  padding: 0 2px;
+}
 body.home #intro {
   background: #808d92 url(/images/bg-ice-cream.jpg) no-repeat 50% 0;
   background-size: cover;
@@ -201,8 +219,13 @@ body.home #intro {
 body.home #story {
   background: #ffffff url(/images/texture/light.png);
   background-size: 150px 150px;
-  padding: 20px 0 30px 0;
-  border-bottom: 5px solid #ddd;
+  padding: 20px 0 0 0;
+}
+body.home #story .clarity {
+  padding: 0 25px 25px 25px;
+  font-style: italic;
+  color: #888;
+  text-align: center;
 }
 body.home #content {
   background: #f4f4f4;
@@ -213,6 +236,7 @@ body.home #content .content-block {
 }
 body.home #content .content-block:last-child {
   border-bottom: 0;
+  margin-bottom: 0;
 }
 body.home #gallery {
   padding: 50px 0;
@@ -256,13 +280,17 @@ body.home #gallery .lightbox img.gallery-image {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 body.day #intro {
-  background: #0a1f31 url(/images/bg.jpg) no-repeat 50% 20%;
+  background: #b3b3b3 url(/images/bg.jpg) no-repeat 50% 20%;
   background-size: cover;
   height: 500px;
 }
 body.day #intro.blanc {
   background: #959ca8 url(/images/bg-blanc.jpg) no-repeat 50% 50%;
   background-size: cover;
+}
+body.day #map {
+  border-top: 5px solid #ddd;
+  height: 320px;
 }
 body.day #content {
   padding: 0;
@@ -273,7 +301,7 @@ body.day #content h1 {
   color: #2f4a5f;
   padding-bottom: 35px;
 }
-body.day #content .ceramony {
+body.day #content .ceremony {
   padding: 50px 0 35px 0;
   background: #ffffff url(/images/texture/light.png);
   background-size: 150px 150px;
@@ -282,21 +310,45 @@ body.day #content .guest-information {
   padding: 50px 0;
   border-top: 5px solid #ddd;
   border-bottom: 5px solid #ddd;
+}
+body.day #content .guest-information .clarity {
+  padding: 0 25px 35px 25px;
+  font-style: italic;
+  color: #888;
   text-align: center;
 }
 body.day #content .guest-information h2 {
-  padding: 0 0 20px 0;
+  padding: 0 0 10px 0;
+  text-align: center;
 }
 body.day #content .guest-information h5 {
-  padding: 5px 0 12px 0;
+  padding: 15px 0 12px 0;
+}
+body.day #content .guest-information .block {
+  padding: 0 200px;
 }
 body.day #content .party {
   clear: both;
   padding: 50px 0;
   background: #fff;
 }
+body.day #content .party h2 {
+  text-align: center;
+}
 body.day #content .party .column {
   text-align: center;
+  padding: 0 0 0 80px;
+  width: 400px;
+}
+body.day #content .party .column.alt {
+  width: 400px;
+  padding: 0 80px 0 0;
+}
+body.day #content .party .column.centered {
+  float: none;
+  clear: both;
+  margin: 0 auto;
+  padding: 30px 0 0 0;
 }
 body.day #content .party .column img {
   margin-bottom: 15px;
@@ -316,9 +368,13 @@ body.day #content .party .column ul li.highlight {
 body.day #content .party .column ul li strong {
   display: block;
   font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
   font-size: 12px;
   text-transform: uppercase;
+}
+body.day #content .party .column ul li strong span {
+  font-size: 10px;
+  text-transform: lowercase;
 }
 body.denver #intro {
   background: #0a1f31 url(/images/bg-dark.jpg) no-repeat 50% 50%;
@@ -332,7 +388,6 @@ body.denver #content .stay {
   padding: 20px 0 0 0;
   background: #ffffff url(/images/texture/light.png);
   background-size: 150px 150px;
-  border-bottom: 5px solid #ddd;
 }
 body.denver #content .hotel {
   padding: 25px 0 5px 0;
@@ -345,9 +400,8 @@ body.denver #content .hotel .dedent span {
   display: block;
   font-size: 14px;
   font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
   text-transform: uppercase;
-  font-weight: bold;
   color: #888;
 }
 body.denver #content .hotel .dedent a {
@@ -375,6 +429,9 @@ body.denver #content .hotel p .room {
   display: inline-block;
   width: 210px;
 }
+body.denver #content .hotel p strong {
+  font-weight: normal;
+}
 body.denver #content .city {
   padding: 30px 0 40px 0;
   background: #44567f url(/images/bg-denver.jpg) no-repeat 50% 0%;
@@ -400,7 +457,7 @@ body.denver #content .city .highlight ul li.title {
   margin-left: -15px;
   list-style: none;
   font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
   font-size: 18px;
 }
 body.denver #content .city .highlight ul li {
@@ -417,7 +474,7 @@ body.denver #content .city .highlight ul li a:hover {
 body.denver #content .city .highlight ul li span {
   display: block;
   font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal;
+  font-weight: normal !important;
   text-transform: uppercase;
   font-size: 12px;
 }

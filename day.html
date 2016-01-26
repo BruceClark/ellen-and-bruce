@@ -44,16 +44,50 @@
   ga('create', 'UA-69811395-1', 'auto');
   ga('send', 'pageview');
 </script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', map_init);
+
+    function map_init() {
+        var mapOptions = {
+            zoom: 16,
+            center: new google.maps.LatLng(39.7642400,-104.9794140),
+            scrollwheel: false,
+            navigationControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            draggable: false,
+            disableDefaultUI: true,
+            styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+        };
+        var mapElement = document.getElementById('map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Address
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(39.7642400,-104.9794140),
+            map: map,
+            title: 'Blanc',
+            icon: {
+              size: new google.maps.Size(65, 65),
+              scaledSize: new google.maps.Size(65, 65),
+              url: "/images/icons/map-heart.png"
+            },
+        });
+    }
+</script>
 </head>
 <body class="day">
 
   <nav class="navigation">
     <ul>
-      <li class="home">E + B</li>
+      <li onclick="location.href='/'" class="home">E + B</li>
       <li><a href="/">The Couple</a></li>
       <li class="active"><a href="/day.html">The Big Day</a></li>
       <li><a href="/denver.html">Staying in Denver</a></li>
-      <li><a href="https://www.zola.com/registry/ellenandbruce">Registry</a></li>
+      <li><a href="https://www.zola.com/registry/ellenandbruce" target="_blank">Registry</a></li>
     </ul>
   </nav>
 
@@ -61,7 +95,7 @@
 
   </section>
 
-  <section id="content"><div class="ceramony clearfix">
+  <section id="content"><div class="ceremony clearfix">
     <div class="container">
 
       <div class="column short">
@@ -71,12 +105,13 @@
           <h5>Date &amp; Time</h5>
           <p>
             April 30, 2016<br>
-            5:30pm &ndash; 11pm
-            <br>(Sunset is at 7:50pm)
+            Late Afternoon
+            <br>
+            <span class="note">Official time coming soon.</span>
           </p>
 
           <h5>Location</h5>
-          <p><a onclick="swap_blanc();" href="#blanc">Blanc</a><br>3150 Walnut Street<br>Denver, Colorado 80205<br><a href="https://www.google.com/maps/place/3150+Walnut+St,+Denver,+CO+80205/@39.7642399,-104.9816027,17z/data=!3m1!4b1!4m2!3m1!1s0x876c791955d69c89:0x8da55eb09745add9" target="_blank">(Google Maps Link)</a></p>
+          <p><a onclick="swap_blanc();" href="#blanc">Blanc</a><br>3150 Walnut Street<br>Denver, Colorado 80205<br><a href="https://www.google.com/maps/place/3150+Walnut+St,+Denver,+CO+80205/@39.7642399,-104.9816027,17z/data=!3m1!4b1!4m2!3m1!1s0x876c791955d69c89:0x8da55eb09745add9" target="_blank">View on Google Maps</a></p>
         </div>
       </div><!-- / .column -->
 
@@ -95,31 +130,42 @@
           <h5>Transportation</h5>
           <p>
             Uber, Lyft, or Cab
-            <span class="note">The venue is about a 5-to-10 minute ride from Downtown. Street parking is available for those who drive.</span>
+            <span class="note">The venue is about a 5-to-10 minute ride from Downtown. Street parking is available for those who prefer to drive.</span>
           </p>
         </div>
       </div><!-- / .column -->
 
     </div><!-- / .container -->
-  </div><!-- / .ceramony -->
+  </div><!-- / .ceremony -->
+
+  <div id="map">
+
+  </div><!-- / #map -->
 
   <div class="guest-information"><div class="container">
 
     <h2>Guest Information</h2>
 
-    <h5>Adults Only Please</h5>
-    <p>Please make sure to leave the kiddos at home for this event.<br>We love all friends and family but request that this be an adult only affair.</p>
+    <div class="clarity">The bride and groom would like to share a few important requests before the wedding.</div>
 
-    <h5>Unplugged Ceramony</h5>
-    <p>We kindly ask during the ceramony that all guests turn off their phones and refrain from taking photos.<br>We encourage guests to enjoy the moment and let our photographers capture it in their vision.</p>
+    <div class="content-block callout block">
+      <h5>Adults Only Please</h5>
+      <p>While we love all of the kiddos in our lives, we ask that this wedding be an adults only affair. So grab a sitter and come relax :)</p>
 
-    <h5>#EllenAndBruce</h5>
-    <p>Once the reception starts please feel free to use your devices and take as many photos as you'd like!</p>
+      <h5>Unplugged Ceremony</h5>
+      <p>We kindly ask during the ceremony that all guests turn off their phones and refrain from taking photos.</p>
+      <p>It is our hope that all guests enjoy the moment and let our photographers capture it in their vision.</p>
+
+      <h5>#EllenAndBruce</h5>
+      <p>Having said that, please feel free to bring your devices back out for the reception and take as many photos as you like!</p>
+    </div>
 
   </div></div><!-- / .guest-information -->
 
   <div class="party clearfix"><div class="container">
-      <div class="column short">
+      <h2>The Cast</h2>
+
+      <div class="column">
         <img src="/images/icons/flower.png" alt="flower" width="120" height="120">
         <h4>Bride's Parents</h4>
         <ul>
@@ -129,18 +175,18 @@
 
         <h4>Bridal Party</h4>
         <ul>
-          <li class="highlight"><strong>Maid of Honor</strong> Emily Caviglia</li>
+          <li class="highlight"><strong>Maid <span>of</span> Honor</strong> Emily Caviglia</li>
           <li>Alana Blythe</li>
           <li>Jackie Zoeller</li>
           <li>Miranda Clark</li>
         </ul>
       </div>
 
-      <div class="column short">
+      <div class="column alt">
         <img src="/images/icons/tie.png" alt="Tie" width="120" height="120">
         <h4>Groom's Parents</h4>
         <ul>
-          <li>Steve Clark</li>
+          <li>Stephen Clark</li>
           <li>Betsy Clark</li>
         </ul>
 
@@ -152,9 +198,24 @@
           <li>Taylor Smith</li>
         </ul>
       </div>
+
+      <div class="column centered">
+        <h4>Special Appearances By</h4>
+        <ul>
+          <li>Monica Petersen</li>
+          <li class="highlight">Laura Clark</li>
+          <li>Chris Knorr</li>
+          <li>Dayna Solomon</li>
+        </ul>
+      </div>
     </div></div><!-- / .party -->
 
   </div></section><!-- / #content -->
+
+  <div class="designed clearfix">
+    <span>Site created with <em>&hearts;</em> by The Groom</span> <strong>&bull;</strong>
+    <a href="http://www.selahphotography.org/" target="_blank">Engagement photos by Selah Photography</a>
+  </div>
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

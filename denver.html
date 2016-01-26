@@ -49,11 +49,11 @@
 
   <nav class="navigation">
     <ul>
-      <li class="home">E + B</li>
+      <li onclick="location.href='/'" class="home">E + B</li>
       <li><a href="/">The Couple</a></li>
       <li><a href="/day.html">The Big Day</a></li>
       <li class="active"><a href="/denver.html">Staying in Denver</a></li>
-      <li><a href="https://www.zola.com/registry/ellenandbruce">Registry</a></li>
+      <li><a href="https://www.zola.com/registry/ellenandbruce" target="_blank">Registry</a></li>
     </ul>
   </nav>
 
@@ -65,10 +65,9 @@
   <div class="stay clearfix"><div class="container">
 
     <div class="content-block callout">
-      <h1>Welcome to Denver!</h1>
-
-      <p>We love Denver's growing urban scene of awesome restaurants, brewerys, speakeasys, and more. We couldn't be more excited for our guests to experience the city we love!</p>
-      <p>Join us Downtown (our venue's just a few minutes away) to enjoy the city. Below we have accomodation details, as well as some of our favorite places and activities in the city!</p>
+      <h1>The Mile High City</h1>
+      <p>It's no secret that we love Denver. We love the vibrant urban atmosphere we live in and we hope our guests will have a chance to experience the city where our story began.</p>
+      <p>We have booked hotel room blocks in the heart of Downtown, an easy walk from some of our favorite restaurants and bars. We sincerely hope you enjoy your stay!</p>
     </div><!-- / .content-block -->
 
   </div></div><!-- / .stay -->
@@ -81,10 +80,11 @@
         <span>1111 14th St<br>
         Denver, CO 80202<br>
         303-389-3000</span>
-        <a href="https://www.google.com/maps/place/Four+Seasons+Hotel+Denver/@39.746699,-105.0002007,17z/data=!3m1!4b1!4m2!3m1!1s0x876c78cf8e4d6c57:0x8b9588a0a023fc4c" target="_blank">(Google Maps Link)</a>
+        <a href="https://www.google.com/maps/place/Four+Seasons+Hotel+Denver/@39.746699,-105.0002007,17z/data=!3m1!4b1!4m2!3m1!1s0x876c78cf8e4d6c57:0x8b9588a0a023fc4c" target="_blank">View on Google Maps</a>
       </div>
 
-      <p>It doesn't get much nicer than the Four Seasons in Denver. Completed in 2010 and one of only four Five Diamond hotels located in Colorado. We're ecstatic to offer a more than 50% discount off their normal pricing with our room block. We can't illustrate enough how much we love the Four Seasons' attention to detail, service, and comfort.</p>
+      <p>The Four Seasons is the couple's first choice for a stay in Denver, and where Bruce and Ellen will be staying for the weekend. It's one of only four Five Diamond hotels located in Colorado. They've kindly offered 50% off their standard rate. This is a great choice for guests looking for attention to detail, service, and comfort.</p>
+      <p>Please reserve rooms before March 30th, as unreserved rooms will be released at that time.</p>
 
       <div class="pics">
         <a href="#"><img src="/images/four-seasons/hotel.jpg" alt="Hotel" height="110"></a>
@@ -112,10 +112,11 @@
         <span>1405 Curtis Street<br>
         Denver, CO 80202<br>
         303-571-0300</span>
-        <a href="https://www.google.com/maps/place/the+Curtis+Denver+-+a+DoubleTree+by+Hilton+Hotel/@39.745946,-104.9995177,17z/data=!3m1!4b1!4m2!3m1!1s0x876c78d01c2afe1d:0x73ab587e72012a59" target="_blank">(Google Maps Link)</a>
+        <a href="https://www.google.com/maps/place/the+Curtis+Denver+-+a+DoubleTree+by+Hilton+Hotel/@39.745946,-104.9995177,17z/data=!3m1!4b1!4m2!3m1!1s0x876c78d01c2afe1d:0x73ab587e72012a59" target="_blank">View on Google Maps</a>
       </div>
 
-      <p>The Curtis is our alternative hotel option and another great place to stay located right Downtown. A few blocks from Larimer Square it hosts a swanky 60's interior with comfortable rooms and nice amenities.</p>
+      <p>The Curtis is located just around the corner from The Four Seasons and is a great choice for guests who are looking for a great value, but still want to stay in the heart of Downtown Denver.</p>
+      <p>Please reserve rooms before March 30th, as unreserved rooms will be released at that time.</p>
 
       <div class="pics">
         <a href="#"><img src="/images/curtis/hotel.jpg" alt="Hotel" height="110"></a>
@@ -136,10 +137,10 @@
   <div class="city"><div class="container">
 
     <div class="content-block callout">
-      <h2>Food, Fun, &amp; More</h2>
+      <h2>What to Do</h2>
 
       <div class="highlight clearfix">
-        <p>Denver is booming &mdash; from tech to real estate the city is better than ever! Here are some of our favorite destinations and activities to check out:</p>
+        <p>Denver is booming! While in town we hope you'll be able to experience the city. Here are some of our favorite destinations and activities to check out:</p>
 
         <ul>
           <li class="title">Restaurants</li>
@@ -190,6 +191,11 @@
 
   </div></section><!-- / #content -->
 
+  <div class="designed clearfix">
+    <span>Site created with <em>&hearts;</em> by The Groom</span> <strong>&bull;</strong>
+    <a href="http://www.selahphotography.org/" target="_blank">Engagement photos by Selah Photography</a>
+  </div>
+
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script>
@@ -201,8 +207,8 @@
         $(this).removeClass('showing');
         $('.pics a img').removeAttr('width').attr('height','110').show();
       } else {
-        $('.pics a img').hide();
-        $('img',this).removeAttr('height').attr('width','710').show();
+        $(this).parent('.pics').find('a img').hide();
+        $('img',this).removeAttr('height').attr('width','680').show();
         $(this).addClass('showing');
       }
 
