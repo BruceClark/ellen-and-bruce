@@ -15,12 +15,12 @@
 
 .font_heading {
   font-family: "gotham_light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal !important;
+  font-weight: normal;
 }
 
 .font_primary {
   font-family: "museo_slab500", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial;
-  font-weight: normal !important;
+  font-weight: normal;
 }
 
 
@@ -79,6 +79,7 @@ body {
     float: right;
     margin-right: -220px;
     margin-left: 0;
+    text-align: right;
   }
 
   h3, h4 {
@@ -131,6 +132,9 @@ body {
   padding: 50px 0 35px 0;
 }
 
+strong {
+  font-weight: normal;
+}
 
 //Typography
 
@@ -242,22 +246,32 @@ a {
 }
 
 .designed {
-  backgorund: #eee;
+  background: #333;
   font-size: 12px;
   .font_heading;
   padding: 15px 32px;
   text-transform: uppercase;
   text-align: center;
+  color: #aaa;
 
   strong {
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 8px;
+    color: #fff;
   }
 
   em {
     font-size: 16px;
     color: #bd3622;
     padding: 0 2px;
+  }
+
+  a {
+    color: #83afd8;
+
+    &:hover {
+      color: #eee;
+    }
   }
 }
 
@@ -274,7 +288,7 @@ body.home #intro {
 body.home #story {
   background: #fff url(/images/texture/light.png);
   background-size: 150px 150px;
-  padding: 20px 0 0 0;
+  padding: 15px 0 0 0;
 
   .clarity {
     padding: 0 25px 25px 25px;
@@ -299,7 +313,7 @@ body.home #content {
 }
 
 body.home #gallery {
-  padding: 50px 0;
+  padding: 60px 0 100px 0;
   background: #ddd url(/images/texture/footprint.png);
   border-top: 5px solid #ddd;
 
@@ -307,6 +321,31 @@ body.home #gallery {
     text-align: center;
     padding: 0 0 30px 0;
     color: #777;
+  }
+
+  .credit {
+    padding: 12px 0 0 0;
+    font-size: 16px;
+    .font_heading;
+
+    span {
+      float: left;
+    }
+
+    em {
+      font-size: 11px;
+      float: right;
+      font-style: normal;
+      color: #888;
+      text-transform: uppercase;
+    }
+  }
+
+  .caption {
+    text-align: center;
+    padding: 0 0 35px 0;
+    font-size: 16px;
+    font-style: italic;
   }
 
   .gallery-holder {
@@ -319,10 +358,10 @@ body.home #gallery {
     }
 
     img {
+      float: left;
       cursor: zoom-in;
-      margin: 18px;
       box-shadow: 5px 5px 30px rgba(0,0,0,.12);
-      height: 250px;
+      height: 223px;
     }
   }
 
@@ -532,7 +571,7 @@ body.denver #content {
 
     p .room {
       display: inline-block;
-      width: 210px;
+      width: 225px;
     }
 
     p strong {
@@ -599,13 +638,5 @@ body.denver #content {
     }
   }
 }
-
-
-
-
-
-
-
-
 
 
