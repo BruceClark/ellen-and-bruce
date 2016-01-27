@@ -517,3 +517,12 @@ body.denver #content .city .highlight ul li span em {
   text-transform: none;
   display: block;
 }
+@media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .navigation ul li {
+    font-size: 24px;
+  }
+  .navigation ul li a {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+}
