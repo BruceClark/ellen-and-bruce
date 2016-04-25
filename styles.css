@@ -161,6 +161,9 @@ p {
   clear: both;
   height: 0;
 }
+.clear {
+  clear: both;
+}
 a {
   color: #4178ac;
   text-decoration: none;
@@ -336,9 +339,24 @@ body.day #content h1 {
   padding-bottom: 35px;
 }
 body.day #content .ceremony {
-  padding: 50px 0 35px 0;
+  padding: 50px 0 25px 0;
   background: #ffffff url(/images/texture/light.png);
   background-size: 150px 150px;
+}
+body.day #content .other {
+  padding: 35px 15px 0 15px;
+  border-top: 2px solid #ccc;
+}
+body.day #content .other h5 {
+  float: left;
+  padding-right: 40px;
+}
+body.day #content .other p {
+  float: left;
+  width: 205px;
+}
+body.day #content .other p.last {
+  padding-left: 30px;
 }
 body.day #content .guest-information {
   padding: 50px 0;
