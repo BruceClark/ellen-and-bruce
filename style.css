@@ -76,6 +76,7 @@ body {
   padding: 10px 0 5px 0;
 }
 .column {
+  position: relative;
   width: 450px;
   padding: 0 15px;
   float: left;
@@ -339,9 +340,32 @@ body.day #content h1 {
   padding-bottom: 35px;
 }
 body.day #content .ceremony {
-  padding: 50px 0 25px 0;
+  padding: 60px 0 25px 0;
   background: #ffffff url(/images/texture/light.png);
   background-size: 150px 150px;
+}
+body.day #content .weather {
+  position: absolute;
+  top: -60px;
+  width: 355px;
+  right: 35px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 12px 15px 16px 60px;
+  font-size: 14px;
+}
+body.day #content .weather h4 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-left: -36px;
+  font-size: 20px;
+}
+body.day #content .weather h4 img {
+  width: 28px;
+  height: 28px;
+  margin-top: -2px;
+  margin-left: -3px;
+  float: left;
+  padding-right: 10px;
 }
 body.day #content .other {
   padding: 35px 15px 0 15px;
